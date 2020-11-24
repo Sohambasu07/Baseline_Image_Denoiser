@@ -6,7 +6,7 @@ Based on the paper: https://web.stanford.edu/class/cs331b/2016/projects/zhao.pdf
 
 
 Directory Structure:
-./checkpoints/
+./checkpoints/ \n
 --BaseLine_Denoiser_VOC_265.h5
 ./notebooks/
 --Baseline_Denoiser_MNIST_Image_Denoising_using_Autoencoder_with_skip_connections.ipnyb
