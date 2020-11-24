@@ -13,7 +13,7 @@ def build_train_dataset():
     #print(dataloader.images)
     train_dataset = dataloader.make_dataset()
     spe = dataloader.__len__()//dataloader.batch_size
-    return train_dataset, spe
+    return train_dataset, dataloader, spe
 
 def build_model():
     model = DenoiseNet((cfg.img_size, cfg.img_size, cfg.n_ch))
