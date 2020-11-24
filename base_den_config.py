@@ -14,10 +14,10 @@ sgd = tf.keras.optimizers.SGD
 adam = tf.keras.optimizers.Adam
 rmsp = tf.keras.optimizers.RMSprop
 pixel_mse = 'mean_squared_error'
-lr = 0.0001
+lr = 1e-4
 
 optimizer = adam
 loss = pixel_mse
 
-checkpoint_path = '/content/checkpoints'
-checkpoint_name = 'BaseLine_Denoiser.h5'
+checkpoint_path = '/checkpoints/'
+checkpoint_name = 'BaseLine_Denoiser_VOC_'+str(img_size)+'.h5'
