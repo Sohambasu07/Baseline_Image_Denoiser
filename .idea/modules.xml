@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://D:/Python Programs/AI Projects/.idea/AI Projects.iml" filepath="D:/Python Programs/AI Projects/.idea/AI Projects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Baseline_Image_Denoiser.iml" filepath="$PROJECT_DIR$/.idea/Baseline_Image_Denoiser.iml" />
+      <module fileurl="file://D:/Studies/Image Processing Project/.idea/Image Processing Project.iml" filepath="D:/Studies/Image Processing Project/.idea/Image Processing Project.iml" />
+      <module fileurl="file://D:/Python Programs/Soham_PyCharm/.idea/SB.iml" filepath="D:/Python Programs/Soham_PyCharm/.idea/SB.iml" />
+    </modules>
+  </component>
+</project>
