@@ -1,7 +1,7 @@
 import tensorflow as tf
 
 dataset_url = 'https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/BSDS300-images.tgz' #'https://data.deepai.org/PASCALVOC2007.zip'
-file_name = 'CBSD300' #'VOCTrainVal'
+file_name = 'BSDS300' #'VOCTrainVal'
 
 img_size = 256
 n_ch = 3
