@@ -13,4 +13,4 @@ def download():
     zip_ref = zipfile.ZipFile(dataset_zip_path, 'r')
     zip_ref.extractall(dataset_path)
     zip_ref.close()
-    return dataset_path
+    return dataset_path+"/"+file_name+"/images/"
