@@ -12,4 +12,4 @@ def download():
     # zip_ref = tarfile.open(dataset_zip_path, 'r')
     # zip_ref.extractall(dataset_path)
     # zip_ref.close()
-    return dataset_path+"/"+file_name+"/images/"
+    return dataset_zip_path+"/"+file_name+"/images/"
