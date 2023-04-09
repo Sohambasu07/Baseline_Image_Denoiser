@@ -7,7 +7,7 @@ import base_den_config as cfg
 
 
 def build_train_dataset(split = 'train'):
-    dat = dataset_downloader.download() + split
+    dat = dataset_downloader.download() + split + "/*"
     print(dat)
     dataloader = DataLoader(dat, cfg.img_size, cfg.batch_size, cfg.buf_size)
     print(dataloader.__len__())
