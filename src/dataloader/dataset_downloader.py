@@ -7,8 +7,7 @@ def download():
     file_name = cfg.file_name
     dataset_url = cfg.dataset_url
     dataset_zip_path = tf.keras.utils.get_file(
-        '/content/', dataset_url, extract=True
-        )
+        fname = '/content/'+file_name, origin = dataset_url)#, extract=True)
     dataset_path = '/content/Dataset'
     zip_ref = tarfile.open(dataset_zip_path, 'r')
     zip_ref.extractall(dataset_path)
