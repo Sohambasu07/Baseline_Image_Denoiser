@@ -7,8 +7,8 @@ Based on the paper: https://web.stanford.edu/class/cs331b/2016/projects/zhao.pdf
 (Models trained for 50 epochs and lr = 1e-3)
  <ul>
   <!-- <li>PASCAL VOC 2007 with AWGN (σ = 70): SSIM = | PSNR = </li> -->
-  <li>BSD300 with AWGN (σ = 30): SSIM = 0.82 | PSNR = 28.88</li>
-  <li>BSD300 with AWGN (σ = 70): SSIM = 0.91 | PSNR = 32.99</li>
+  <li>BSD300 with AWGN (σ = 30): SSIM = 0.7828 | PSNR = 27.9252</li>
+  <li>BSD300 with AWGN (σ = 70): SSIM = 0.9140 | PSNR = 32.9684</li>
 </ul> 
 
 <h2>Directory Structure:</h2>

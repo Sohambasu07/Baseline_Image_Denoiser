@@ -1,8 +1,10 @@
 import tensorflow as tf
 
+repo_name = 'Baseline_Image_Denoiser'
+root_path = '/content'
 dataset_url = 'https://www2.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/segbench/BSDS300-images.tgz' #'https://data.deepai.org/PASCALVOC2007.zip'
 file_name = 'BSDS300' #'VOCTrainVal'
-dataset_folder = '/content/Dataset'
+dataset_folder = root_path + '/Dataset'
 dataset_path = dataset_folder+"/"+file_name+"/images/"
 
 img_size = 256
@@ -22,5 +24,5 @@ lr = 1e-3
 optimizer = adam
 loss = pixel_mse
 
-checkpoint_path = '/content/Baseline_Image_Denoiser/checkpoints/'
+checkpoint_path = root_path + '/' + repo_name + '/checkpoints/'
 checkpoint_name = 'Baseline_Denoiser_CBSD300_' + str(img_size) + "_s" + str(noise_std) + '.h5' # 'BaseLine_Denoiser_VOC_'+str(img_size)+'.h5'
