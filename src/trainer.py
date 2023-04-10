@@ -17,13 +17,11 @@ def build_train_dataset(split = 'train'):
     spe = dataloader.__len__()//dataloader.batch_size
     return train_dataset, dataloader, spe
 
-def build_model():
+def build_model(load_weights = False, weights_path = None):
     model = DenoiseNet((cfg.img_size, cfg.img_size, cfg.n_ch))
+    if load_weights:
+       model.load_weights(weights_path)
     return model
-
-def model_loadweights(model, weights_path):
-   model = model.load_weights(weights_path)
-   return model
 
 def ssim(y_true, y_pred, max_val=1.0):
 #   y_true = (y_true + max_val) / 2
