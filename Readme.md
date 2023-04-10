@@ -17,8 +17,8 @@ Based on the paper: https://web.stanford.edu/class/cs331b/2016/projects/zhao.pdf
 ├── checkpoints
 │   └── BaseLine_Denoiser_VOC_265.h5
 ├── notebooks
-│   ├── Baseline_Denoiser_MNIST_Image_Denoising_using_Autoencoder_with_skip_connections.ipnyb
-│   └── aseline_Image_Denoiser_AutoEnc_SkipConn
+│   ├── Baseline_Denoiser_MNIST_Image_Denoising_using_Autoencoder_with_symmetric_skip_connections.ipnyb
+│   └── Baseline_Image_Denoiser_AutoEnc_SkipConn
 ├── src
 │   ├── dataloader
 │   │  ├──dataloader.py
