@@ -2,6 +2,7 @@
 import tensorflow as tf
 import numpy as np
 AUTOTUNE = tf.data.experimental.AUTOTUNE
+import base_den_config as cfg
 
 class DataLoader:
 
@@ -36,7 +37,7 @@ class DataLoader:
   @staticmethod
   def addNoise(input_img):
     mean = 0
-    stdv = 70
+    stdv = cfg.noise_std
     noise = np.random.randint(mean, stdv, input_img.shape)
     noisy_img = input_img + noise/255.0
     noisy_img = tf.clip_by_value(noisy_img, 0.0, 1.0)

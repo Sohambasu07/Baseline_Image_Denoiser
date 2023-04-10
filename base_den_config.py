@@ -9,6 +9,7 @@ img_size = 256
 n_ch = 3
 batch_size = 8
 buf_size = 1024
+noise_std = 30
 
 epochs = 50
 
@@ -16,10 +17,10 @@ sgd = tf.keras.optimizers.SGD
 adam = tf.keras.optimizers.Adam
 rmsp = tf.keras.optimizers.RMSprop
 pixel_mse = 'mean_squared_error'
-lr = 1e-4
+lr = 1e-3
 
 optimizer = adam
 loss = pixel_mse
 
 checkpoint_path = '/checkpoints/'
-checkpoint_name = 'Baseline_Denoiser_CBSD300' + str(img_size)+'.h5' # 'BaseLine_Denoiser_VOC_'+str(img_size)+'.h5'
+checkpoint_name = 'Baseline_Denoiser_CBSD300_' + str(img_size) + noise_std + '.h5' # 'BaseLine_Denoiser_VOC_'+str(img_size)+'.h5'
