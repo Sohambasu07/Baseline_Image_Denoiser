@@ -52,7 +52,7 @@ def train(dataset, model, steps_per_epoch):
     callbacks = [
        callbacks1,
        tf.keras.callbacks.EarlyStopping(
-       monitor='psnr', mode = 'max', patience=1
+       monitor='psnr', mode = 'max', patience=10
        ),
        tf.keras.callbacks.ModelCheckpoint(
        filepath=os.path.join(
