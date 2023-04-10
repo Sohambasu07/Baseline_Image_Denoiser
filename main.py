@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from src import trainer, visualizer
 import base_den_config as cfg
 
-train_dataset, train_dataloader, spe = trainer.build_train_dataset('train')
+train_dataset, train_dataloader, spe = trainer.build_train_dataset('train')         #spe = steps per epochs
 print(cfg.checkpoint_path + cfg.checkpoint_name)
 model = trainer.build_model()
 model = trainer.compile_model(model)#, load_weights = True, weights_path = cfg.checkpoint_path + cfg.checkpoint_name)
