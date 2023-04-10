@@ -43,8 +43,8 @@ def compile_model(model, load_weights = False, weights_path = None):
 
 class CustomCallback(tf.keras.callbacks.Callback):
   def on_epoch_end(self, epoch, logs={}):
-    if(logs.get('psnr')>=0.5400):
-      print("\nReached 0.54 PSNR so cancelling training!")
+    if(logs.get('psnr')>=54.00):
+      print("\nReached 54.00 PSNR so cancelling training!")
       self.model.stop_training = True
 callbacks1 = CustomCallback()
 
