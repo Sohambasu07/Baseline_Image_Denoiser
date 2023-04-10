@@ -22,14 +22,14 @@ def build_model():
     return model
 
 def ssim(y_true, y_pred, max_val=1.0):
-  y_true = (y_true + max_val) / 2
-  y_pred = (y_pred + max_val)/ 2
+#   y_true = (y_true + max_val) / 2
+#   y_pred = (y_pred + max_val)/ 2
   ssim = tf.image.ssim(y_true, y_pred, max_val)
   return ssim
 
 def psnr(y_true, y_pred, max_val=1.0):
-  y_true = (y_true + max_val) / 2
-  y_pred = (y_pred + max_val) / 2
+#   y_true = (y_true + max_val) / 2
+#   y_pred = (y_pred + max_val) / 2
   psnr = tf.image.psnr(y_true, y_pred, max_val)
   return psnr
 
