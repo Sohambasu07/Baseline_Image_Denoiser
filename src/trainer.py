@@ -22,7 +22,7 @@ def build_model():
     model = DenoiseNet((cfg.img_size, cfg.img_size, cfg.n_ch))
     return model
 
-def load_model(model_path):
+def model_load(model_path):
    dependencies = {'ssim': ssim, 'psnr': psnr}
    model = load_model(model_path, compile=False,custom_objects = dependencies)
    return model
