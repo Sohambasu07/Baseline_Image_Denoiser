@@ -17,10 +17,8 @@ def build_train_dataset(split = 'train'):
     spe = dataloader.__len__()//dataloader.batch_size
     return train_dataset, dataloader, spe
 
-def build_model(load_weights = False, weights_path = None):
+def build_model():
     model = DenoiseNet((cfg.img_size, cfg.img_size, cfg.n_ch))
-    if load_weights:
-       model.load_weights(weights_path)
     return model
 
 def ssim(y_true, y_pred, max_val=1.0):
@@ -35,8 +33,10 @@ def psnr(y_true, y_pred, max_val=1.0):
   psnr = tf.image.psnr(y_true, y_pred, max_val)
   return psnr
 
-def compile_model(model):
+def compile_model(model, load_weights = False, weights_path = None):
     model.compile(loss=cfg.loss, optimizer=cfg.optimizer(cfg.lr), metrics=['accuracy', ssim, psnr])
+    if load_weights:
+       model.load_weights(weights_path)
     model.summary()
     tf.keras.utils.plot_model(model, show_shapes=True, dpi=64)
     return model
