@@ -21,7 +21,7 @@ def build_model():
     model = DenoiseNet((cfg.img_size, cfg.img_size, cfg.n_ch))
     return model
 
-def model_loadweights(weights_path):
+def model_loadweights(model, weights_path):
    model = model.load_weights(weights_path)
    return model
 
