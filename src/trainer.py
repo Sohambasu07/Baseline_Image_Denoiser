@@ -41,16 +41,24 @@ def compile_model(model, load_weights = False, weights_path = None):
     tf.keras.utils.plot_model(model, show_shapes=True, dpi=64)
     return model
 
+class CustomCallback(tf.keras.callbacks.Callback):
+  def on_epoch_end(self, epoch, logs={}):
+    if(logs.get('psnr')>=0.5400):
+      print("\nReached 0.54 PSNR so cancelling training!")
+      self.model.stop_training = True
+callbacks1 = CustomCallback()
+
 def train(dataset, model, steps_per_epoch):
     callbacks = [
-        tf.keras.callbacks.EarlyStopping(
-            monitor='loss', patience=10
-        ),
-        tf.keras.callbacks.ModelCheckpoint(
-            filepath=os.path.join(
-                cfg.checkpoint_path, cfg.checkpoint_name
-            ), monitor='loss', mode='min', save_freq=1,
-            save_best_only=True, save_weights_only=True
+       callbacks1,
+       tf.keras.callbacks.EarlyStopping(
+       monitor='psnr', mode = 'max', patience=1
+       ),
+       tf.keras.callbacks.ModelCheckpoint(
+       filepath=os.path.join(
+                    cfg.checkpoint_path, cfg.checkpoint_name
+                    ), monitor='psnr', mode='max', save_freq=1,
+                    save_best_only=True, save_weights_only=True
         )]
     model.fit(dataset,
               epochs = cfg.epochs,
