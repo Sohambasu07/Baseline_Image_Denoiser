@@ -1,6 +1,7 @@
 import tensorflow as tf
 import os
 import numpy as np
+from tensorflow.keras.models import load_model
 from .dataloader import DataLoader, dataset_downloader
 from .model import DenoiseNet
 import base_den_config as cfg
@@ -20,6 +21,11 @@ def build_train_dataset(split = 'train'):
 def build_model():
     model = DenoiseNet((cfg.img_size, cfg.img_size, cfg.n_ch))
     return model
+
+def load_model(model_path):
+   dependencies = {'ssim': ssim, 'psnr': psnr}
+   model = load_model(model_path, compile=False,custom_objects = dependencies)
+   return model
 
 def ssim(y_true, y_pred, max_val=1.0):
 #   y_true = (y_true + max_val) / 2

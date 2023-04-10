@@ -23,4 +23,4 @@ optimizer = adam
 loss = pixel_mse
 
 checkpoint_path = '/checkpoints/'
-checkpoint_name = 'Baseline_Denoiser_CBSD300_' + str(img_size) + str(noise_std) + '.h5' # 'BaseLine_Denoiser_VOC_'+str(img_size)+'.h5'
+checkpoint_name = 'Baseline_Denoiser_CBSD300_' + str(img_size) + "_s" + str(noise_std) + '.h5' # 'BaseLine_Denoiser_VOC_'+str(img_size)+'.h5'
